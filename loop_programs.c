@@ -1,5 +1,17 @@
 #include <stdio.h>
 
+/* Helper: returns 1 if n is prime, otherwise 0 */
+int isPrime(int n) {
+    int i;
+    if (n < 2)
+        return 0;
+    for (i = 2; i <= n / 2; i++) {
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
 /* 1. Print 1st 10 natural nos. */
 void p1(void) {
     int i;
